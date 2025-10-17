@@ -17,6 +17,9 @@ void draw()
     colony[i].walk();
     colony[i].show();
   }
+  if (totalTouch==20){
+  background(123,123,123);
+  }
 }
 class Bacteria
 {
@@ -51,15 +54,16 @@ class Bacteria
       }
       touched = true;
     }
-    System.out.println(totalTouch);
-    if (touched == true) {
+   if (touched == true) {
       fill (0, 255, 0);
     } else {
       fill(myC);
     }
+
     if (totalTouch == 50){
       fill((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));
     }
+
     ellipse(myX, myY, mySize, mySize);
   }
 }
